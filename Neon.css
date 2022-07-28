@@ -1,0 +1,128 @@
+*{
+    margin:0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --shadow : 6px 6px 20px , #1c1d1d;
+    --light-color:  linear-gradient(to right top, #65dfc9, #6cdbed);
+    --light-color2:  linear-gradient(to right top, #06f8cc, #17d4f1);
+    --glass:  linear-gradient(to right bottom, rgba(255,255,255,0.8), rgba(255,255,255,0.3));;
+    --glass2: linear-gradient(to right bottom, rgba(255,255,255,1), rgba(255,255,255,0.5)); ;
+    --glass3: linear-gradient(to right bottom, rgba(255,255,255,0.8), rgba(255,255,255,0.3)); ;
+}
+img{
+    width:4rem;
+    height:4rem;
+    border-radius: 50%;
+}
+.container{
+    min-height: 100vh;
+    background: var(--light-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.glass{
+    background-color: white;
+    min-height: 80vh;
+    width: 70%;
+    background: var(--glass);
+    border-radius: 1rem;
+    z-index: 3;
+    backdrop-filter: blur(2rem);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.dashboard{
+    margin:0px;
+    background: var(--glass2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;;
+}
+.dashboard p{
+    margin: 20px 0px 0px 3px;
+    max-width: 6rem;
+}
+.user{
+    margin-bottom: 30px;
+    margin-top: 0px;
+}
+.user p{
+    margin-top: 4px;
+    margin-bottom: 20px;
+}
+
+a{
+    display: flex;
+    flex-direction: column; 
+    padding: 10px; 
+    margin: 10px 0px;
+    text-decoration: none;
+    color: var(--glass3);
+    font-size: 0.8rem;
+}
+a:hover{
+    background: var(--light-color2);
+    border-radius: 1rem;
+}
+.language h1{
+    font-size: 1.5rem;
+    margin: 20px 0px;
+}
+input{
+    border-radius: 1rem;
+    border: none;
+    height: 1.6rem;
+    width: 16rem;
+    background: var(--light-color2)
+}
+.wrapper{
+    margin-left: 30px;
+}
+.cards{
+    display: flex;
+    align-items: center;
+    margin: 20px 10px 20px 0px;
+    justify-content: space-evenly;
+    background: var(--glass3);
+    border-radius: 1rem;
+    box-shadow: 2px 2px 2px #424d4b;
+    height: 5.5rem;
+}
+.foot{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circle1, .circle2{
+    position: absolute;
+    border-radius: 50%;
+}
+.circle1{
+    background: var(--glass2);
+    height: 10rem;
+    width: 20rem;
+    bottom: 0%;
+    left: 2%;
+}
+.circle2{
+    background: var(--glass2);
+    height: 10rem;
+    width: 20rem;
+    top: 0%;
+    right: 2%;
+}
+@media (max-width: 700px){
+    .glass{
+        display: flex;
+        flex-direction: column;
+    }
+    .circle1, .circle2{
+        display: none;
+    }
+}
